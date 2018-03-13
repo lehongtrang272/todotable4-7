@@ -6,7 +6,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {date:'', description: '', todos: []}
-    this.addTodo = this.addTodo.bind(this);
   }
 
   inputChanged = (event) => {
@@ -43,7 +42,7 @@ class App extends Component {
           </form>
           </div>
           <div>
-          <TodoTable deleteTodo = {this.deleteTodo.bind(this)} todos={this.state.todos} />
+          <TodoTable deleteTodo = {this.deleteTodo} todos={this.state.todos} />
         </div>          
       </div>    
     );
